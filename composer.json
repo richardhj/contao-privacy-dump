@@ -1,0 +1,35 @@
+{
+  "name": "richardhj/contao-privacy-dump",
+  "description": "Create anonymized dumps of the Contao database.",
+  "type": "contao-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Richard Henkenjohann",
+      "email": "richardhenkenjohann@googlemail.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/richardhj/contao-privacy-dump/issues",
+    "source": "https://github.com/richardhj/contao-privacy-dump"
+  },
+  "require": {
+    "php": "^7.1",
+    "richardhj/privacy-dump-bundle": "dev-master",
+    "contao/core-bundle": "^4.9",
+    "symfony/config": "^4.4",
+    "symfony/http-kernel": "^4.4"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Richardhj\\ContaoPrivacyDump\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "Richardhj\\ContaoPrivacyDump\\ContaoManager\\Plugin"
+  }
+}

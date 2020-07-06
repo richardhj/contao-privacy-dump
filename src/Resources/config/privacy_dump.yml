@@ -1,0 +1,64 @@
+richardhj_privacy_dump:
+  database:
+    contao:
+      dsn: '%env(DATABASE_URL)%'
+
+  options:
+    contao:
+      tables:
+        tl_version:
+          truncate: true
+        tl_undo:
+          truncate: true
+        tl_search_index:
+          truncate: true
+        tl_search:
+          truncate: true
+        tl_log:
+          truncate: true
+        tl_cron_job:
+          truncate: true
+        tl_opt_in:
+          truncate: true
+        tl_opt_in_related:
+          truncate: true
+        tl_remember_me:
+          truncate: true
+
+        tl_member:
+          converters:
+            firstname:
+              converter: 'anonymizeText'
+            lastname:
+              converter: 'anonymizeText'
+            street:
+              converter: 'anonymizeText'
+            postal:
+              converter: 'randomizeNumber'
+            city:
+              converter: 'anonymizeText'
+            phone:
+              converter: 'randomizeNumber'
+            fax:
+              converter: 'randomizeNumber'
+            mobile:
+              converter: 'randomizeNumber'
+            company:
+              converter: 'anonymizeText'
+            email:
+              converter: 'randomizeEmail'
+              cache_key: 'member_email'
+              unique: true
+            username:
+              converter: 'randomizeEmail'
+              cache_key: 'member_email'
+              unique: true
+            secret:
+              converter: 'setNull'
+
+        tl_user:
+          converters:
+            session:
+              converter: 'setNull'
+            secret:
+              converter: 'setNull'
