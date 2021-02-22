@@ -18,8 +18,8 @@
     "php": "^7.1",
     "richardhj/privacy-dump-bundle": "dev-main",
     "contao/core-bundle": "^4.9",
-    "symfony/config": "^4.4",
-    "symfony/http-kernel": "^4.4"
+    "symfony/config": "^4.4 || ^5.0",
+    "symfony/http-kernel": "^4.4 || ^5.0"
   },
   "require-dev": {
     "contao/manager-plugin": "^2.7"
