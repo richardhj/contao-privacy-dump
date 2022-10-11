@@ -56,7 +56,7 @@ You can override and extend the configuration:
 
 ```yml
 richardhj_privacy_dump:
-  config:
+  options:
     contao:
       tables:
         tl_my_custom_table:
